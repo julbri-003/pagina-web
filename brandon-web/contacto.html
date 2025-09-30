@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Contacto</title>
+</head>
+<body>
+  <header>
+    <h1>Contacto</h1>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="obra.html">Su obra</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="proyecto.html">Próximo proyecto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<hr>
+
+  <main>
+    <h2>Unite a la comunidad sandersoniana</h2>
+    <p>Si te interesa unirte, rellena el formulario y esperá nuestra respuesta!</p>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="email">Correo:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mensaje">Libro favorito:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="5"></textarea><br><br>
+
+        <label for="genero">Género: </label>
+        <input type="radio" name="genero" id="masculino">
+        <label for="masculino">Hombre</label>
+        <input type="radio" name="genero" id="femenino">
+        <label for="">Mujer</label><br><br>
+
+        <label for="suscribe"> Suscribirse a notificaciones por correo:  </label>
+        <input type="checkbox" name="suscribe" id="suscribe"><br><br>
+
+        <label for="pais">País: </label>
+        <select name="" id="">
+            <option value="">Brasil</option>
+            <option value="">Argentina</option>
+            <option value="">Chile</option>
+        </select><br><br>
+
+        Fecha de nacimiento: <input type="date" name="nacimiento"><br><br>
+        Color favorito: <input type="color" name="color"><br><br>
+        Nivel de hype para el próximo libro (0-10): <input type="range" min="0" max="10"><br><br>
+        Selecciona tu saga favorita:
+        <select name="saga">
+            <option value="mistborn">Mistborn</option>
+            <option value="stormlight">Stormlight Archive</option>
+            <option value="elantris">Elantris</option>
+        </select>
+            <br><br>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>© 2025 Sitio sobre Brandon Sanderson - Proyecto HTML</p>
+    <ul>
+      <li><a href="https://www.brandonsanderson.com/">Sitio oficial</a></li>
+      <li><a href="https://www.cosmere.es/">Cosmere.es</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

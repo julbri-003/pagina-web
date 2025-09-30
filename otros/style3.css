@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid; /* definis como grilla*/
+  /*grid-template-columns: 1fr 1fr 1fr; Se puede poner en px, o se puede poner como fr que divide toda la pagina en partes iguales*/
+  grid-template-columns: repeat(3, 1fr);
+}

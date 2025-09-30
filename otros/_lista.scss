@@ -1,0 +1,9 @@
+$colors: red, green, blue;
+
+@each $color in $colors {
+    .#{$color}-bg{
+        background-color: $color;
+    }
+}
+//se usan en familias de estilos: colores, fuentes, tamanos, bordes
+//genera: red-bg, green-bg, blue-bg
