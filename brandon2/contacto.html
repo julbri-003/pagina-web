@@ -33,7 +33,29 @@
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje" rows="5" required></textarea>
 
+        <label for="suscribe"> Suscribirse a notificaciones por correo:  </label>
+        <input type="checkbox" name="suscribe" id="suscribe"><br><br>
+
+        <label for="pais">País: </label>
+          <select name="" id="">
+              <option value="">Brasil</option>
+              <option value="">Argentina</option>
+              <option value="">Chile</option>
+          </select><br><br>
+
+          Fecha de nacimiento: <input type="date" name="nacimiento"><br><br>
+          Color favorito: <input type="color" name="color"><br><br>
+          Nivel de hype para el próximo libro (0-10): <input type="range" min="0" max="10"><br><br>
+          Selecciona tu saga favorita:
+          <select name="saga">
+              <option value="mistborn">Mistborn</option>
+              <option value="stormlight">Stormlight Archive</option>
+              <option value="elantris">Elantris</option>
+          </select>
+              <br><br>
+              
         <button type="submit" class="btn btn-primary">Enviar</button>
+
       </form>
     </section>
   </main>
