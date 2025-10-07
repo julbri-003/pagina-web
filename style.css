@@ -65,6 +65,12 @@ header .nav-bar{
   color: #da62ff;
 }
 
+nav a{
+  color: #ecf0f1;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
 /* -------------------- RESPONSIVE -------------------- */
 @media (max-width: 768px) {
   /* Apilar todo dentro del nav */
@@ -124,10 +130,13 @@ footer {
 p {
   color: rgba(40, 40, 80, 0.9);
   font-size: 18px;
-  margin: 20px;
+  margin: 20px auto;   
+  width: fit-content;
   max-width: 100%;   
+  text-align: center;
+  flex-wrap: wrap;
   width: 100%;      
-  padding: 12px;
+  padding: 15px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -166,14 +175,29 @@ section {
 /* Columnas en móviles */
 .d-flex.flex-wrap {
   flex-direction: column;
-  gap: 1rem;
+  gap: 20px;
 }
-
 /* Columnas en tablet y escritorio */
 @media (min-width: 768px) {
   .d-flex.flex-wrap {
-    flex-direction: row;
+    flex-direction: column;
   }
+}
+
+.d-flex.flex-wrap.justify-content-around {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  display: inline-block;
+  height: 90%;
+  border: 1px solid #ddd;
+  margin: 10px;
+  background: #f1e9ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* -------------------- TÍTULOS -------------------- */
@@ -296,6 +320,7 @@ div{
     flex-wrap: wrap;
     padding: 5%;
 }
+
 /* -------------------- TIMELINE -------------------- */
 
 .timeline {
