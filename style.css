@@ -42,11 +42,18 @@ header {
 
   /* Menú vertical en pantallas chicas */
   @media (max-width: 768px) {
+
     .nav-bar ul {
-      flex-direction: column;
-      padding: 0;
-    }
+    flex-direction: column;   /* vertical */
+    gap: 10px;
+    align-items: flex-start;  /* opcional: alinea a la izquierda */
   }
+
+  .nav-bar {
+    flex-direction: column;   /* si quieres que el header también apile elementos */
+    align-items: flex-start;
+  }
+}
 }
 
 nav ul {
@@ -314,6 +321,15 @@ marquee {
   top: 0;
   z-index: 10;
 }
+
+@media (max-width: 768px) {
+  .banner {
+    height: 200px; /* altura menor en móviles */
+    position: fixed;
+  }
+}
+
+
 
 /* -------------------- FOOTER (FLEXBOX) -------------------- */
 footer ul {
