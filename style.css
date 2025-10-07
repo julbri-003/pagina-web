@@ -268,7 +268,17 @@ div{
     flex-wrap: wrap;
     padding: 5%;
 }
+/* -------------------- TIMELINE -------------------- */
 
+.timeline {
+  background: #2c1d42;
+  border: 2px solid #180835;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 /* -------------------- TEXTO EN MOVIMIENTO (MARQUEE) -------------------- */
 marquee {
   color: #4e1ca0;
@@ -285,21 +295,23 @@ marquee {
 }
 
 /* -------------------- BANNER STICKY -------------------- */
+
 .banner {
-  background-image: url(https://external-preview.redd.it/O5XGHsf9C09Le5ml0_YwFzdmOATTu_6Yg5WrfJuwrsE.png?format=pjpg&auto=webp&s=f3075002de3621e5bda96f02e26f28c6ed57b8c5#center);
-  background-position: center;
-  height: 350px;
+  background-image: url(https://external-preview.redd.it/O5XGHsf9C09Le5ml0_YwFzdmOATTu_6Yg5WrfJuwrsE.png?format=pjpg&auto=webp&s=f3075002de3621e5bda96f02e26f28c6ed57b8c5);
+  background-position: center;      
+  background-size: cover;           
+  width: 100%;       /* para q se ajuste a la pantalla*/                
+  height: 350px;                    
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
   margin: 100px 20px 40px 40px;
   border: 3px solid #e0e0e0;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   position: sticky;
-  top: 0px;
+  top: 0;
   z-index: 10;
 }
 
