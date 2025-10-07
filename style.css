@@ -1,11 +1,11 @@
-/* Reset */
+/* -------------------- RESET DE ESTILOS -------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fondo general con Grid layout */
+/* -------------------- LAYOUT GENERAL DEL BODY (GRID) -------------------- */
 body {
   display: grid;
   grid-template-columns: 1fr;                /* una sola columna en mobile */
@@ -20,33 +20,33 @@ body {
   padding: 15px;
 }
 
-/* Áreas principales */
+/* -------------------- HEADER Y NAVEGACIÓN -------------------- */
 header {
 /* Nav con Flexbox */
-.nav-bar {
-  background-color: navy;
-  border-radius: 8px;
-  color: #ecf0f1;
-  padding: 12px 20px;
+  .nav-bar {
+    background-color: navy;
+    border-radius: 8px;
+    color: #ecf0f1;
+    padding: 12px 20px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
 
-/* A partir de tabletas: menú horizontal */
-@media (max-width: 768px) {
-  .nav-bar ul {
-  flex-direction: column;
-  padding: 0;
-}
-}
+  /* Menú vertical en pantallas chicas */
+  @media (max-width: 768px) {
+    .nav-bar ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
 }
 
 nav ul {
@@ -63,7 +63,7 @@ nav a {
   text-align: center;
 }
 
-
+/* -------------------- MAIN -------------------- */
 main {
   grid-area: main;
   display: flex;
@@ -75,7 +75,7 @@ main {
   box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-
+/* -------------------- FOOTER -------------------- */
 footer {
   grid-area: footer;
   grid-template-areas: "copyright" "links";
@@ -92,7 +92,7 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Párrafos */
+/* -------------------- PÁRRAFOS -------------------- */
 p {
   color: rgba(40, 40, 80, 0.9);
   font-size: 18px;
@@ -107,7 +107,7 @@ p {
   outline-offset: 5px;
 }
 
-/* pantallas chicas */
+/* Responsive para párrafos */
 @media (max-width: 1025px) {
   p {
     max-width: 100%; /* más angosto */
@@ -115,6 +115,7 @@ p {
   }
 }
 
+/* -------------------- IFRAME -------------------- */
 iframe {
   width: 100%;
   height: 400px;
@@ -122,6 +123,7 @@ iframe {
   margin: 15px 0;
 }
 
+/* -------------------- SECCIONES Y LAYOUT FLEX -------------------- */
 .seccion-index {
   margin-top: 70px;
 }
@@ -146,8 +148,7 @@ section {
   }
 }
 
-
-/* Títulos */
+/* -------------------- TÍTULOS -------------------- */
 h1{
   color: #002b5c;
   text-align: center;
@@ -163,7 +164,8 @@ h1:hover {
   color: #7b1fa2;
   text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
 }
-/* Texto más grande */
+
+/* Responsive para títulos */
 @media (min-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -184,7 +186,7 @@ h2 {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
 }
 
-/* Links */
+/* -------------------- LINKS -------------------- */
 a {
   text-decoration: none;
   color: #1a73e8;
@@ -194,6 +196,7 @@ a:hover {
   color: #da62ff;
 }
 
+/* -------------------- IMÁGENES -------------------- */
 img {
   max-width: 100%;
   height: auto;
@@ -207,15 +210,14 @@ img:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
+/* Imágenes grandes en escritorio */
 @media (min-width: 992px) {
   img {
     max-width: 600px; 
   }
 }
 
-
-
-/* Barra superior sticky */
+/* -------------------- BARRA SUPERIOR STICKY -------------------- */
 #top {
   color: #7b1fa2;
   font-size: 18px;
@@ -235,13 +237,13 @@ img:hover {
   z-index: 10;
 }
 
+/* -------------------- BARRA SUPERIOR ALTERNATIVA -------------------- */
 .top{
   font-size: 18px;
   padding-left: 25px;
   background: #dfb6ed;
   border-left: 4px solid #4c156e;
   margin: 15px;
-  
   border-radius: 8px;
   outline: none;
 
@@ -258,6 +260,7 @@ img:hover {
   }
 }
 
+/* -------------------- DIVS GENERALES -------------------- */
 div{
     display: flex;
     justify-content: center;
@@ -266,7 +269,7 @@ div{
     padding: 5%;
 }
 
-/* Texto en movimiento */
+/* -------------------- TEXTO EN MOVIMIENTO (MARQUEE) -------------------- */
 marquee {
   color: #4e1ca0;
   text-decoration: underline;
@@ -281,9 +284,7 @@ marquee {
   top: 70px;
 }
 
-
-
-/* Banner con posición sticky */
+/* -------------------- BANNER STICKY -------------------- */
 .banner {
   background-image: url(https://external-preview.redd.it/O5XGHsf9C09Le5ml0_YwFzdmOATTu_6Yg5WrfJuwrsE.png?format=pjpg&auto=webp&s=f3075002de3621e5bda96f02e26f28c6ed57b8c5#center);
   background-position: center;
@@ -302,9 +303,7 @@ marquee {
   z-index: 10;
 }
 
-/* Footer en flexbox */
-
-
+/* -------------------- FOOTER (FLEXBOX) -------------------- */
 footer ul {
   list-style-type: none;
   color: #c3f4ff;
@@ -333,7 +332,8 @@ footer p{
   border-radius: 8px;
   font-family: "Nunito Sans", sans-serif;
 }
-/* Lista con Grid */
+
+/* -------------------- LISTA CON GRID -------------------- */
 .lista {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -355,6 +355,7 @@ footer p{
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* -------------------- CLASES DESTACADAS -------------------- */
 
 /* Clase título */
 .titulo {
@@ -396,7 +397,7 @@ footer p{
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
-/* Galería con Grid */
+/* -------------------- GALERÍA DE IMÁGENES (GRID) -------------------- */
 .proyecto-imagen {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -415,6 +416,7 @@ footer p{
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+/* -------------------- FORMULARIOS -------------------- */
 form input, form textarea, form select {
   padding: 8px;
   border-radius: 6px;
@@ -428,7 +430,7 @@ form input, form textarea, form select:hover{
   text-decoration: overline;
 }
 
-/* BOTÓN */
+/* BOTÓN DE FORMULARIO */
 input[type="submit"] {
   background-color: #4e1ca0;
   color: #fff;
