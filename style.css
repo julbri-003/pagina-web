@@ -21,53 +21,74 @@ body {
 }
 
 /* -------------------- HEADER Y NAVEGACIÓN -------------------- */
-header {
-/* Nav con Flexbox */
-  .nav-bar {
-    background-color: navy;
-    border-radius: 8px;
-    color: #ecf0f1;
-    padding: 12px 20px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
 
-  /* Menú vertical en pantallas chicas */
-  @media (max-width: 768px) {
+header .nav-bar{
+  background-color: navy;
+  border-radius: 8px;
+  color: #ecf0f1;
+  padding: 12px 20px;
 
-    .nav-bar ul {
-    flex-direction: column;   /* vertical */
-    gap: 10px;
-    align-items: flex-start;  /* opcional: alinea a la izquierda */
-  }
-
-  .nav-bar {
-    flex-direction: column;   /* si quieres que el header también apile elementos */
-    align-items: flex-start;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  
 }
-}
+/* -------------------- HEADER Y NAV -------------------- */
 
-nav ul {
-  list-style-type: none;
+
+/* Lista horizontal por defecto */
+.nav-bar ul {
+  list-style: none;
   display: flex;
   flex-direction: row;
   gap: 15px;
   padding: 0;
+  margin: 0;
 }
 
-nav a {
+/* Links del nav */
+.nav-bar a {
   color: #ecf0f1;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  color: #da62ff;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  /* Apilar todo dentro del nav */
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Lista vertical */
+  .nav-bar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-bar ul li {
+    width: 100%;
+  }
+
+  .nav-bar a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
 }
 
 /* -------------------- MAIN -------------------- */
@@ -104,8 +125,8 @@ p {
   color: rgba(40, 40, 80, 0.9);
   font-size: 18px;
   margin: 20px;
-  max-width: 100%;   /* nunca va a superar el ancho del dispositivo */
-  width: 100%;       /* ocupa todo el ancho disponible */
+  max-width: 100%;   
+  width: 100%;      
   padding: 12px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -253,19 +274,19 @@ img:hover {
   margin: 15px;
   border-radius: 8px;
   outline: none;
+}
 
-  p{
-    display: inline-block;
-    max-width: none;       /* elimina límite */
-    width: auto;           /* que lo defina el texto */
-  }
-
-  a{
+.top a{
     color: #2b063b;
     text-decoration: none;
     font-weight: bold;
   }
-}
+
+ .top p{
+    display: inline-block;
+    max-width: none;       
+    width: auto;           
+  }
 
 /* -------------------- DIVS GENERALES -------------------- */
 div{
@@ -325,11 +346,9 @@ marquee {
 @media (max-width: 768px) {
   .banner {
     height: 200px; /* altura menor en móviles */
-    position: fixed;
+    position: relative;
   }
 }
-
-
 
 /* -------------------- FOOTER (FLEXBOX) -------------------- */
 footer ul {
