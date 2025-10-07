@@ -421,12 +421,11 @@ form input, form textarea, form select {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   width: 100%;
-  transition: border 0.3s ease;
 }
 
-form input, form textarea, form select {
+form input, form textarea, form select:hover{
   border-color: #7b1fa2;
-  outline: none;
+  text-decoration: overline;
 }
 
 /* BOTÓN */
@@ -438,6 +437,9 @@ input[type="submit"] {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+input[type="submit"]:focus {
+  background-color: #9c27b0;
 }
 
 input[type="submit"]{
