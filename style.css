@@ -20,6 +20,12 @@ body {
   padding: 15px;
 }
 
+@media (max-width: 768px){
+  body {
+    padding: 70px;
+  }
+}
+
 /* -------------------- HEADER Y NAVEGACIÓN -------------------- */
 
 
@@ -370,8 +376,10 @@ marquee {
 
 @media (max-width: 768px) {
   .banner {
+    display:inline-block;
     height: 200px; /* altura menor en móviles */
     position: relative;
+
   }
 }
 
