@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <title>Contacto - Brandon Sanderson</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
       <label for="nav-toggle" class="nav-toggle">&#9776;</label>
 
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="../index.html">Inicio</a></li>
         <li><a href="obra.html">Su obra</a></li>
         <li><a href="historia.html">Historia</a></li>
         <li><a href="productos.html">Productos</a></li>
@@ -53,17 +53,22 @@
               <option value="">Chile</option>
           </select><br><br>
 
-          Fecha de nacimiento: <input type="date" name="nacimiento"><br><br>
-          Color favorito: <input type="color" name="color"><br><br>
-          Nivel de hype para el próximo libro (0-10): <input type="range" min="0" max="10"><br><br>
-          Selecciona tu saga favorita:
-          <select name="saga">
-              <option value="mistborn">Mistborn</option>
-              <option value="stormlight">Stormlight Archive</option>
-              <option value="elantris">Elantris</option>
+          <label for="nacimiento">Fecha de nacimiento:</label>
+          <input type="date" id="nacimiento" name="nacimiento"><br><br>
+
+          <label for="color">Color favorito:</label>
+          <input type="color" id="color" name="color"><br><br>
+
+          <label for="hype">Nivel de hype para el próximo libro (0-10):</label>
+          <input type="range" id="hype" name="hype" min="0" max="10"><br><br>
+
+          <label for="saga">Selecciona tu saga favorita:</label>
+          <select id="saga" name="saga">
+            <option value="mistborn">Mistborn</option>
+            <option value="stormlight">Stormlight Archive</option>
+            <option value="elantris">Elantris</option>
           </select>
-              <br><br>
-              
+
         <button type="submit" class="btn btn-primary">Enviar</button>
 
       </form>
