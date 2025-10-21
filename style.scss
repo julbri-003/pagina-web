@@ -209,10 +209,9 @@ nav a{
 main {
   grid-area: main;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   padding: 2rem;
   border-radius: 10px;
@@ -335,6 +334,12 @@ section {
   padding: 20px;
   border-radius: 10px;
   box-shadow: $shadow-base;
+}
+
+#volver-arriba {
+  margin: 0;
+  padding: 0;
+  background-color: none;
 }
 
 .d-flex {
