@@ -341,9 +341,7 @@ section {
 }
 
 #volver-arriba {
-  margin: 0.5rem;
-  margin-top: 2rem;
-  background-color: none;
+  opacity:0;
 }
 
 .d-flex {
@@ -460,6 +458,10 @@ img {
   position: sticky;
   top: 45px;
   z-index: 10;
+
+  @include respond-to(mobile) {
+    top: 5rem;
+  }
 }
 
 .top {

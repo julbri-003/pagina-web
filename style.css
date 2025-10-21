@@ -275,9 +275,7 @@ section {
 }
 
 #volver-arriba {
-  margin: 0.5rem;
-  margin-top: 2rem;
-  background-color: none;
+  opacity: 0;
 }
 
 .d-flex.flex-wrap {
@@ -395,6 +393,11 @@ img:hover {
   position: sticky;
   top: 45px;
   z-index: 10;
+}
+@media (max-width: 768px) {
+  #top {
+    top: 5rem;
+  }
 }
 
 .top {
