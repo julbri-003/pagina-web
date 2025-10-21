@@ -161,8 +161,10 @@ header {
         }
       }
     }
+  }
 
-    
+  #volver-arriba{
+    margin: 0;
   }
 }
 
@@ -179,7 +181,14 @@ nav a{
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    flex-wrap: wrap;
+    
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    overflow: auto;
+    transition: max-height 0.3s ease;
   }
 
   /* Lista vertical */
@@ -188,42 +197,10 @@ nav a{
     width: 100%;
   }
 
-  .nav-bar ul li {
-    width: 100%;
-  }
-
   .nav-bar a {
     display: block;
     width: 100%;
     padding: 8px 0;
-  }
-}
-
-/* -------------------- RESPONSIVE -------------------- */
-@media (max-width: 768px) {
-  header {
-    .nav-bar {
-      flex-direction: column;
-      align-items: flex-start;
-
-      .nav-links {
-        flex-direction: column;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-
-      // Si el checkbox está marcado, desplegar menú
-      .nav-toggle-checkbox:checked + .nav-toggle + .nav-links {
-        max-height: 500px; // ajusta según cantidad de links
-        opacity: 1;
-      }
-    }
   }
 }
 
