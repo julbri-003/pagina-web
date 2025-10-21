@@ -16,7 +16,7 @@ body {
 }
 @media (max-width: 768px) {
   body {
-    padding-top: 300px;
+    padding-top: 1rem;
   }
 }
 
@@ -123,7 +123,6 @@ nav a {
 
 /* -------------------- RESPONSIVE -------------------- */
 @media (max-width: 768px) {
-  /* Apilar todo dentro del nav */
   .nav-bar {
     flex-direction: column;
     align-items: flex-start;
@@ -148,9 +147,12 @@ nav a {
 }
 main {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   padding: 2rem;
   border-radius: 10px;
   justify-content: center;
@@ -186,12 +188,12 @@ main .lista li {
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 @media (max-width: 768px) {
-  main .lista {
+  main {
     grid-template-columns: 1fr;
   }
 }
-
 footer {
   grid-area: footer;
   display: flex;
