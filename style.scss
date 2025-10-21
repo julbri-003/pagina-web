@@ -331,10 +331,11 @@ iframe {
 
 section {
   background: #f1e9ff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: $shadow-base;
 }
+
 
 #volver-arriba {
   margin: 0;
@@ -361,9 +362,9 @@ section {
   display: inline-block;
   height: 90%;
   border: 1px solid #ddd;
-  margin: 10px;
+  margin: 1rem;
   background: #f1e9ff;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: $shadow-base;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
