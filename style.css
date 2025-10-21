@@ -172,6 +172,11 @@ main .lista {
   overflow-y: auto;
   max-width: fit-content;
 }
+@media (max-width: 768px) {
+  main .lista {
+    grid-template-columns: 1fr;
+  }
+}
 main .lista img {
   width: 100%;
   margin: 0;
@@ -188,11 +193,6 @@ main .lista li {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-}
 footer {
   grid-area: footer;
   display: flex;
@@ -267,10 +267,16 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 768px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 
 #volver-arriba {
-  margin: 0;
-  padding: 0;
+  margin: 0.5rem;
+  margin-top: 2rem;
   background-color: none;
 }
 

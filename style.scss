@@ -233,6 +233,10 @@ main {
   overflow-y: auto;
   max-width: fit-content;
 
+    @include respond-to(mobile) {
+    grid-template-columns: 1fr; 
+    }
+
   img {
     width: 100%;
     margin:0;
@@ -253,11 +257,6 @@ main {
 }
 }
 
-@include respond-to(mobile) {
-  main{
-    grid-template-columns: 1fr; // una columna
-  }
-}
 
 // -------------------- FOOTER --------------------
 footer {
@@ -334,12 +333,16 @@ section {
   padding: 10px;
   border-radius: 10px;
   box-shadow: $shadow-base;
+
+  @include respond-to(mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
-
 #volver-arriba {
-  margin: 0;
-  padding: 0;
+  margin: 0.5rem;
+  margin-top: 2rem;
   background-color: none;
 }
 
