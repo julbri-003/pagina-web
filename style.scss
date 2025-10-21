@@ -231,7 +231,7 @@ main {
   border-radius: 8px;
   max-height: 300px;
   overflow-y: auto;
-  max-width: fit-content;
+  max-width: 90%;
 
     @include respond-to(mobile) {
     grid-template-columns: 1fr; 
@@ -253,7 +253,6 @@ main {
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
-
 }
 }
 
@@ -294,6 +293,7 @@ footer {
     text-decoration: dotted;
     border-radius: 8px;
     font-family: $font-base;
+    outline: none;
   }
 }
 
@@ -441,6 +441,11 @@ img {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
+.round-img{
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 // -------------------- BARRA SUPERIOR --------------------
 #top {
   color: $color-secundario;
@@ -471,9 +476,10 @@ img {
   border-left: 4px solid #4c156e;
   margin: 15px;
   border-radius: 8px;
+  outline: none;
 
   a { color: #2b063b; text-decoration: none; font-weight: bold; }
-  p { display: inline-block; max-width: none; width: auto; }
+  p { display: inline-block; max-width: none; width: auto;}
 }
 
 // -------------------- BANNER --------------------

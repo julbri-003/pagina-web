@@ -170,7 +170,7 @@ main .lista {
   border-radius: 8px;
   max-height: 300px;
   overflow-y: auto;
-  max-width: fit-content;
+  max-width: 90%;
 }
 @media (max-width: 768px) {
   main .lista {
@@ -228,6 +228,7 @@ footer p {
   text-decoration: dotted;
   border-radius: 8px;
   font-family: "Nunito Sans", sans-serif;
+  outline: none;
 }
 
 p {
@@ -377,6 +378,11 @@ img:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+.round-img {
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 #top {
   color: #7b1fa2;
   font-size: 18px;
@@ -407,6 +413,7 @@ img:hover {
   border-left: 4px solid #4c156e;
   margin: 15px;
   border-radius: 8px;
+  outline: none;
 }
 .top a {
   color: #2b063b;
