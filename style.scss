@@ -70,17 +70,18 @@ header {
       padding: 0;
       margin: 0;
 
-      li { }
+      li {
+        a {
+          color: $color-texto;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover { color: $color-terciario; }
+        }
+       }
     }
 
-    a {
-      color: $color-texto;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-
-      &:hover { color: $color-terciario; }
-    }
 
     @include respond-to(mobile) {
       flex-direction: column;
@@ -102,13 +103,9 @@ header {
     }
   }
 
-
-$color-principal: navy;
-$color-secundario: #da62ff;
-
 header {
   .nav-bar {
-    background-color: $color-principal;
+    background-color: $color-primario;
     border-radius: 8px;
     color: #ecf0f1;
     padding: 12px 20px;
@@ -123,6 +120,27 @@ header {
     right: 0;
     z-index: 99;
 
+    ul{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    a{
+      color: #ecf0f1;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #da62ff;
+    }
+
+
     .nav-links {
       list-style: none;
       display: flex;
@@ -130,8 +148,8 @@ header {
       gap: 15px;
       padding: 0;
       margin: 0;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
-      opacity: 0;
+      transition: max-height 0.3s ease;
+      opacity: 1;
 
       li a {
         color: #ecf0f1;
@@ -144,16 +162,40 @@ header {
       }
     }
 
-    .nav-toggle {
-      display: none;
-      font-size: 2rem;
-      cursor: pointer;
-      color: #ecf0f1;
-    }
+    
+  }
+}
 
-    .nav-toggle-checkbox {
-      display: none; // ocultamos el checkbox
-    }
+nav a{
+  color: #ecf0f1;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+  /* Apilar todo dentro del nav */
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* Lista vertical */
+  .nav-bar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-bar ul li {
+    width: 100%;
+  }
+
+  .nav-bar a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
   }
 }
 
@@ -185,6 +227,7 @@ header {
   }
 }
 
+
 // -------------------- MAIN --------------------
 main {
   grid-area: main;
@@ -195,7 +238,49 @@ main {
   border-radius: 10px;
   justify-content: center;
   box-shadow: $shadow-base;
+
+  .lista {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items:start;
+  padding: 1rem;
+  background: #f9fff9;
+  border-left: 4px solid #00aa55;
+  margin: 15px;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  max-width: fit-content;
+
+  img {
+    width: 100%;
+    margin:0;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  li{
+    margin: 0;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  // Responsive: en pantallas pequeñas apilamos
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // una columna
+  }
 }
+
+
+}
+
+
 
 // -------------------- FOOTER --------------------
 footer {
@@ -351,12 +436,12 @@ a {
 
 // -------------------- IMÁGENES --------------------
 img {
-  max-width: 100%;
+  max-width: auto;
   height: auto;
   display: block;
-  margin: 15px auto;
+  margin: 20px auto;
   border-radius: 8px;
-  box-shadow: #2b063b;
+  box-shadow: 5px 10px #2b063b;
 
   &:hover {
     transform: scale(1.05);
@@ -366,6 +451,11 @@ img {
   @include respond-to(tablet) { max-width: 600px; }
 }
 
+.portada-obra {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 // -------------------- BARRA SUPERIOR --------------------
 #top {
   color: $color-secundario;
