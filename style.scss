@@ -714,7 +714,11 @@ form {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  overflow: hidden;
+
+  
 }
+
 
 @media (max-width: 768px) {
   .carousel-inner {
@@ -722,11 +726,30 @@ form {
   }
 
   .carousel-item .carrusel-info {
-    padding: 1rem;
+    padding: 0.2rem;
+    object-fit: contain;
+    font-size: 2px;
+    align-items: center;
+    justify-items: flex-start;
+    max-height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    
+
+    h3 {
+      font-size: 15px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    p {
+      padding: 0px;
+      margin: 0px;
+      font-size: 10px;
+      max-height: 20%;
+    }
   }
 }
-
-
 
 .proyecto-container{
   display:grid;

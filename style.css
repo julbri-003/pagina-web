@@ -639,6 +639,7 @@ form input[type=submit]:hover {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -646,7 +647,25 @@ form input[type=submit]:hover {
     height: 300px;
   }
   .carousel-item .carrusel-info {
-    padding: 1rem;
+    padding: 0.2rem;
+    object-fit: contain;
+    font-size: 2px;
+    align-items: center;
+    justify-items: flex-start;
+    max-height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .carousel-item .carrusel-info h3 {
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .carousel-item .carrusel-info p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 10px;
+    max-height: 20%;
   }
 }
 .proyecto-container {
