@@ -137,7 +137,8 @@ header {
     }
 
     a:hover {
-      color: #da62ff;
+      color: #d448ff;
+      text-decoration:wavy;
     }
 
 
@@ -497,7 +498,7 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 10;
 
@@ -536,12 +537,16 @@ marquee {
 }
 
 // -------------------- DIVs GENERALES --------------------
-div {
+.contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 5%;
+}
+
+div{
+  padding: 2rem;
 }
 
 // -------------------- FORMULARIOS --------------------
@@ -583,4 +588,65 @@ form {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
   }
+}
+
+/* --- REGLAS PARA EL CARRUSEL: pegar y reemplazar las anteriores --- */
+/* --- Carrusel de obras (centrado y sin romper Bootstrap) --- */
+.carousel-inner {
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Contenedor interno que sí puede usar flex */
+.carousel-item .image-container {
+  width: 100%;
+  height: 100%;
+  display: flex; /* centramos contenido */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* Imagen centrada correctamente */
+.carousel-item img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  max-height: 450px;
+  object-fit:cover;   /* 🔹 muestra toda la imagen sin recortar */
+  object-position: center center;
+  border-radius: 10px;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;        /* 🔹 centra horizontalmente */
+}
+
+/* Overlay de texto */
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
 }

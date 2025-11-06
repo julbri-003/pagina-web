@@ -2,8 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Explorá la obra de Brandon Sanderson, autor de fantasía épica y creador del Cosmere, a través de sus novelas, sagas y proyectos secretos.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
   <title>Obra - Brandon Sanderson</title>
 </head>
 <body>
@@ -23,36 +28,85 @@
   </header>
 
   <main>
-    <!-- Sección de obras principales -->
-      <section>
+    <section>
         <h1>La obra de Brandon Sanderson</h1>
         <p class="parrafo2"> Sanderson es conocido por sus sistemas de magia detallados, personajes complejos y el universo compartido <strong>Cosmere</strong>.</p>
-      </section>
-      <section>
+    </section>
+    <section>
         <h2 class="titulo2"> Entrevista en video</h2>
         <iframe controls width="560" height="315" src="https://www.bing.com/videos/riverview/relatedvideo?q=interview+brandon+sanderson&&mid=880DFF264EDA9949DCB9880DFF264EDA9949DCB9&&mmscn=stvo&FORM=VRDGAR"title="Brandon Sanderson dando clases"></iframe>
-      </section>
-
-      <hr>
-
-      <section style="display: flex; flex-direction: column;">
-          <h2 class="titulo2">Series principales</h2>
-          <img class="portada-obra" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/06/book-cover-s-of-elantris-tress-of-the-emerald-sea-and-the-way-of-kings-by-brandon-sanderson.jpg" width="300" alt="Portada de libros">
-          <ul class="lista">
-              <li><strong>Mistborn (Nacidos de la Bruma)</strong>: Una trilogía inicial seguida por varias secuelas que exploran diferentes eras en el mismo mundo. Tiene todo: magia, dioses, amor, investigaciones y política.</li>
-              <img src="https://miro.medium.com/v2/resize:fit:1200/1*bkbHr9USq74VMcHnIplSMg.jpeg" alt="Mistborn">
-              <li><strong>El Archivo de las Tormentas</strong>: Una serie épica planeada para diez libros, conocida por su magnitud y profundidad.</li>
-              <img src="https://tse1.mm.bing.net/th/id/OIP.jmDvIma_2_46Y3tFMew-dAHaDX?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="El Archivo de las Tormentas">
-              <li><strong>Elantris</strong>: Su primera novela publicada, situada en un mundo donde una ciudad mágica está en decadencia.</li>
-              <img src="https://3.bp.blogspot.com/-eS3nL39YiPk/VyiI2JfkOgI/AAAAAAAAM_k/Vl404EoJvfwNGZf83llgrC0XtgH4FZj7ACLcB/w1200-h630-p-k-no-nu/Elantris.jpg" alt="Elantris">
-              <li><strong>Warbreaker</strong>: Una novela independiente que explora un sistema de magia basado en el color y la respiración.</li>
-              <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1615587371i/31003399._SX540_.jpg" alt="Warbreaker">
-              <li><strong>Skyward</strong>: Una serie de ciencia ficción juvenil centrada en una joven piloto espacial.</li>
-              <img src="https://tse3.mm.bing.net/th/id/OIP.kQziyHktpMk_ONikVv2g6AHaFf?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Skyward">
-          </ul>
-          <p>Si te interesa saber en qué orden leer sus obras, consulta este link <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=interview+brandon+sanderson&&mid=D8DF5753B87F53B2DD65D8DF5753B87F53B2DD65&&FORM=GVRPTV">aquí</a>.</p>
-      </section>
+    </section>
     
+    <section class="container my-5">
+        <h2 class="titulo2">Series principales</h2>
+        <img class="portada-obra" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/06/book-cover-s-of-elantris-tress-of-the-emerald-sea-and-the-way-of-kings-by-brandon-sanderson.jpg" width="300" alt="Portada de libros">
+         
+
+        <div id="carouselHover" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Botones -->
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="1" class="active"></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="2" class="active"></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="3" class="active"></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="4" class="active"></button>
+            </div>
+
+            <!-- Imágenes -->
+            <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="image-container">
+                <img src="https://miro.medium.com/v2/resize:fit:1200/1*bkbHr9USq74VMcHnIplSMg.jpeg" class="d-block w-100" alt="Mistborn">
+                <div class="overlay"><strong>Mistborn (Nacidos de la Bruma)</strong>: Una trilogía inicial seguida por varias secuelas que exploran diferentes eras en el mismo mundo. Tiene todo: magia, dioses, amor, investigaciones y política.</div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="image-container">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.jmDvIma_2_46Y3tFMew-dAHaDX?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="d-block w-100" alt="El archivo de las tormentas">
+                <div class="overlay"><strong>El Archivo de las Tormentas</strong>: Una serie épica planeada para diez libros, conocida por su magnitud y profundidad.</div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="image-container">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.kQziyHktpMk_ONikVv2g6AHaFf?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="d-block w-100" alt="Portada de libro 3">
+                <div class="overlay"><strong>Skyward</strong>: Una serie de ciencia ficción juvenil centrada en una joven piloto espacial.</div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="image-container">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1615587371i/31003399._SX540_.jpg" class="d-block w-100" alt="Portada de libro 2">
+                <div class="overlay"><strong>Warbreaker</strong>: Una novela independiente que explora un sistema de magia basado en el color y la respiración.</div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="image-container">
+                <img src="https://3.bp.blogspot.com/-eS3nL39YiPk/VyiI2JfkOgI/AAAAAAAAM_k/Vl404EoJvfwNGZf83llgrC0XtgH4FZj7ACLcB/w1200-h630-p-k-no-nu/Elantris.jpg" class="d-block w-100" alt="Portada de libro 3">
+                <div class="overlay"><strong>Elantris</strong>: Su primera novela publicada, situada en un mundo donde una ciudad mágica está en decadencia.</div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHover" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHover" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </div>
+    <p>Si te interesa saber en qué orden leer sus obras, consulta este link <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=interview+brandon+sanderson&&mid=D8DF5753B87F53B2DD65D8DF5753B87F53B2DD65&&FORM=GVRPTV">aquí</a>.</p>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -63,5 +117,8 @@
       <li><a href="https://www.cosmere.es/">Cosmere.es</a></li>
     </ul>
   </footer>
+
+  <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
