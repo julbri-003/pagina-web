@@ -98,49 +98,49 @@
 
           <div class="d-flex flex-wrap justify-content-center gap-3">
             <button type="button" class="btn btn-primary popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Sanderlancha" 
+                    data-bs-trigger="click"  data-bs-auto-close="true" title="Sanderlancha" 
                     data-bs-content="Término humorístico del fandom que se refiere a los fanáticos de Brandon Sanderson y sus debates sobre teorías locas.">
               Sanderlancha
             </button>
 
             <button type="button" class="btn btn-success popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Cosmere" 
+                    data-bs-trigger="click"  data-bs-auto-close="true" title="Cosmere" 
                     data-bs-content="Universo compartido donde ocurren la mayoría de las historias de Brandon Sanderson, como Mistborn y El Archivo de las Tormentas.">
               Cosmere
             </button>
 
             <button type="button" class="btn btn-warning popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Shardblade" 
+                    data-bs-trigger="click"  data-bs-auto-close="true" title="Shardblade" 
                     data-bs-content="Espadas mágicas que aparecen en El Archivo de las Tormentas, con habilidades especiales y un rol clave en la historia.">
               Shardblade
             </button>
 
             <button type="button" class="btn btn-danger popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Allomancia" 
+                    data-bs-trigger="click"  data-bs-auto-close="true" title="Allomancia" 
                     data-bs-content="Sistema de magia de Mistborn donde los personajes pueden 'quemar' metales para obtener poderes especiales.">
               Allomancia
             </button>
 
             <button type="button" class="btn btn-info popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Stormlight" 
+                    data-bs-trigger="click"  data-bs-auto-close="true" title="Stormlight" 
                     data-bs-content="Una fuente de poder en El Archivo de las Tormentas que alimenta habilidades especiales como los poderes de los Caballeros Radiantes.">
               Stormlight
             </button>
 
             <button type="button" class="btn btn-secondary popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Mistborn" 
+                    data-bs-trigger="click"  data-bs-auto-close="true"  title="Mistborn" 
                     data-bs-content="Personas capaces de usar Allomancia al máximo, capaces de manipular metales para obtener poderes extraordinarios.">
               Mistborn
             </button>
 
             <button type="button" class="btn btn-dark popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Shardplate" 
+                    data-bs-trigger="click"   data-bs-auto-close="true" title="Shardplate" 
                     data-bs-content="Armadura mágica que otorga fuerza y protección excepcionales a quien la porta, muy importante en El Archivo de las Tormentas.">
               Shardplate
             </button>
 
             <button type="button" class="btn btn-light popover-btn" data-bs-toggle="popover" 
-                    data-bs-trigger="focus" title="Feruquimia" 
+                    data-bs-trigger="click"  data-bs-auto-close="true" title="Feruquimia" 
                     data-bs-content="Sistema de magia de Mistborn donde los usuarios almacenan atributos físicos o mentales en metales para usarlos más tarde.">
               Feruquimia
             </button>
@@ -179,13 +179,15 @@
       <li><a href="https://www.cosmere.es/">Cosmere.es</a></li>
     </ul>
   </footer>
-    <!-- Bootstrap JS  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Inicialización de Popovers -->
     <script>
-      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-      const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el));
+      document.addEventListener('DOMContentLoaded', function () {
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+      });
     </script>
+
 </body>
 </html>
