@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="description" content="Descubrí los próximos proyectos de Brandon Sanderson, sus nuevas novelas y expansiones del Cosmere.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../style.css">
   <title>Próximo Proyecto - Brandon Sanderson</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tu hoja de estilos -->
+  <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
   <header>
-    <!-- Navegación principal -->
     <nav class="nav-bar">
-
       <ul class="nav-links">
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="obra.html">Su obra</a></li>
@@ -24,32 +28,110 @@
   </header>
 
   <main>
-    <!-- Seccion principal de planes a futuro -->
-
-    
     <section style="display: flex; flex-direction: column;">
-      <h1>Que sigue?</h1>
+      <h1>¿Qué sigue?</h1>
       <p>Sanderson ha revelado que trabaja en nuevas novelas del Cosmere y en la continuación de <em>El Archivo de las Tormentas</em>.</p>
       <iframe class="proyecto-imagen" src="https://cosmere.es/state-of-the-sanderson-2024/" width="560" height="315" frameborder="0" allowfullscreen></iframe>
       <h2>Su plan maestro</h2>
       <div class="timeline">
-        <img class="portada-obra" src="https://preview.redd.it/rycpeebkw2091.jpg?auto=webp&s=5f9403c1ac7e3effcc12adefab2f7deb04168356" alt="Linea de tiempo">
+        <img class="portada-obra" src="https://preview.redd.it/rycpeebkw2091.jpg?auto=webp&s=5f9403c1ac7e3effcc12adefab2f7deb04168356" alt="Línea de tiempo">
       </div>
     </section>
 
-    <!-- Informacion adicional -->
-    <section>
-      <h2>Información adicional</h2>
+    <section class="proyecto-container">
+      <section class="proyecto-info">
+        <h2>El futuro del Cosmere</h2>
+        <p>El universo del Cosmere se encuentra en una etapa de expansión sin precedentes. Brandon Sanderson ha confirmado que las próximas décadas de su carrera estarán dedicadas a entrelazar los mundos que hasta ahora solo se habían rozado entre sí. Las conexiones entre sistemas mágicos, culturas y personajes comenzarán a hacerse evidentes, preparando el terreno para un gran clímax interplanetario.</p>
+        <hr>
+        <p>Entre los personajes más relevantes para este futuro, Hoid emerge como el hilo conductor de las historias: un viajero misterioso que ha estado presente en casi todas las obras, moviendo los hilos desde las sombras. Marasi Colms, la brillante investigadora de Mistborn: Era 2, simboliza la transición hacia una era tecnológica y política donde la ciencia empieza a desafiar a la magia. Y Dalinar Kholin, el Bondsmith de El Archivo de las Tormentas, representa la lucha por la unidad en medio del caos, el ideal de un líder que podría cambiar no solo un reino, sino todo el Cosmere.</p>
+        <hr>
+        <p>El futuro de Sanderson apunta hacia una convergencia épica, donde estos tres personajes —y los mundos que representan— jugarán papeles decisivos en el destino final del Cosmere.</p>
+      </section>
+
+      <section class="container-fluid my-5">
+        <h2>Personajes influyentes</h2>
+
+        <div id="carouselHover" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+
+            <!-- Botones -->
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="1" ></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="3" ></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="4" ></button>
+            <button type="button" data-bs-target="#carouselHover" data-bs-slide-to="5" ></button>
+            </div>
+
+            <!-- Imágenes -->
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                  <div class="image-container">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.WYPhaKG4wc7eS0Byo_3pAwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" class="d-block w-100" alt="Hoid Personaje">
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                  <div class="carrusel-info">
+                    <h3>Hoid</h3>
+                    <p class="carrusel-p">Un viajero entre mundos, siempre presente pero nunca del todo revelado. Hoid conoce secretos que trascienden planetas y eras; manipula eventos desde las sombras con un propósito aún desconocido. A veces narrador, a veces bufón, y siempre un observador eterno del Cosmere.</p>
+                  </div>
+              </div>
+
+              <div class="carousel-item ">
+                  <div class="image-container">
+                    <img src="https://i.pinimg.com/originals/8d/a4/f5/8da4f5de7e1d5a22b00fb1c774c6b56f.jpg" class="d-block w-100" alt="Marasi Colms Personaje">
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                  <div class="carrusel-info">
+                    <h3>Marasi Colms</h3>
+                    <p class="carrusel-p">Intelectual y decidida, Marasi representa la evolución de Scadrial hacia una era moderna. Su mente analítica y su sentido de la justicia la convierten en un símbolo de equilibrio entre la ciencia, la ley y la moral en un mundo que aprende a convivir con la magia y el progreso.</p>
+                  </div>
+              </div>
+
+              <div class="carousel-item ">
+                  <div class="image-container">
+                    <img src="https://i.pinimg.com/originals/d9/b7/43/d9b7430c785a272c3b6dab0f69d4199a.jpg" class="d-block w-100" alt="Dalinar Kholin Personaje">
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                  <div class="carrusel-info">
+                    <h3>Dalinar Kholin</h3>
+                    <p class="carrusel-p">El antiguo general de Roshar busca redención a través de la unidad. Dalinar encarna el ideal del Bondsmith: unir lo que está roto, tanto en su mundo como en sí mismo. Su liderazgo y su conexión con los poderes primordiales del Honor lo sitúan en el centro del destino del Cosmere.</p>
+                  </div>
+              </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHover" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHover" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </div>
+      </section>
+
+    </section>
+
+    <section class="proyecto-info">
+      <h2>Podés esperar...</h2>
       <ul class="lista">
         <li>Nuevas novelas de fantasía planeadas para los próximos años</li>
         <li>Expansión del universo Cosmere</li>
         <li>Ediciones especiales y colaboraciones con audiolibros</li>
       </ul>
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Sitio sobre Brandon Sanderson - Próximo Proyecto</p>
     <ul>
@@ -57,5 +139,8 @@
       <li><a href="https://www.cosmere.es/">Cosmere.es</a></li>
     </ul>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

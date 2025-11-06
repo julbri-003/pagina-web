@@ -334,6 +334,8 @@ section {
   padding: 10px;
   border-radius: 10px;
   box-shadow: $shadow-base;
+  width: 100%;
+  display: grid;
 
   @include respond-to(mobile) {
     display: grid;
@@ -370,9 +372,37 @@ section {
   border-radius: 10px;
   box-shadow: $shadow-base;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h2 {
+    color: #2b063b;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0;
+    word-break: break-word;
+    line-height: 1.2;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+
   &:hover {
-    transform: translateY(-5px) scale(1.05) rotate(-1deg);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px) scale(1.03) rotate(-1deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+@include respond-to(mobile) {
+  h2 {
+    font-size: 1.3rem;
+    text-align: center;
   }
 }
 
@@ -400,6 +430,7 @@ h1 {
 h2 {
   color: #002b5c ;
   font-size: 30px ;
+  display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif ;
   margin-top: 15px ;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.25) ;
@@ -648,6 +679,54 @@ form {
 .image-container:hover .overlay {
   opacity: 1;
 }
+.carousel-inner {
+  width: 100%;
+  height: 450px; // altura general del carrusel
+  overflow: hidden;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // cubre todo el slide sin deformarse
+}
+
+.carousel-item .carrusel-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;           // ocupa todo el slide
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/481/200/1004/brandon-sanderson-stormlight-archives-wallpaper-preview.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    height: 300px;
+  }
+
+  .carousel-item .carrusel-info {
+    padding: 1rem;
+  }
+}
+
+
 
 .proyecto-container{
   display:grid;
@@ -655,6 +734,13 @@ form {
   gap:20px;
   grid-template-areas: 
   "informacion carrusel";
+
+  @include respond-to(mobile) {
+    grid-template-columns: 1fr;  
+    grid-template-areas:
+      "informacion"
+      "carrusel";
+  }
 
 }
 
@@ -685,10 +771,10 @@ form {
   line-height: 1.6;
   font-weight: 500;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: background 0.5s ease;
 
-  background-image: url(https://p4.wallpaperbetter.com/wallpaper/481/200/1004/brandon-sanderson-stormlight-archives-wallpaper-preview.jpg);
+  
   filter: blur(8px);
+  background-image: url(https://p4.wallpaperbetter.com/wallpaper/481/200/1004/brandon-sanderson-stormlight-archives-wallpaper-preview.jpg);
 
   .carrusel-p{
     background: none ;
@@ -715,7 +801,129 @@ form {
   }
 
   &:hover {
-    filter: blur(0);
+   filter: blur(0);
     color: rgb(255, 255, 255)
   }
 }
+
+// -------------------- INDEX --------------------
+
+.container-index {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  grid-template-areas: 
+    "introduccion curiosidades";
+
+  @include respond-to(mobile) {
+    grid-template-columns: 1fr;  
+    grid-template-areas:
+      "introduccion"
+      "curiosidades";
+  }
+}
+
+/* Curiosidades - Popovers */
+.curiosidades-grid {
+  grid-area: curiosidades;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  gap: 15px;
+  padding: 0.5rem;
+
+  @include respond-to(mobile) {
+    justify-content: center; 
+  }
+}
+
+.info-accordion {
+  grid-area: introduccion;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .accordion-button {
+    background-color: #7b1fa2;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+
+    &:hover, &:focus {
+      background-color: #da62ff;
+      color: #000;
+      transform: scale(1.02);
+    }
+
+    &.collapsed {
+      background-color: #4c156e;
+      color: #fff;
+    }
+  }
+
+  .accordion-body {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+   
+    color: #2b063b;
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* -------------------- POPOVERS BOOTSTRAP -------------------- */
+.popover-btn {
+    background-color: #7b1fa2; 
+    color: #fff;               
+    border: 2px solid #da62ff;
+    padding: 0.8rem 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1 1 auto;         
+    min-width: 150px;        
+    max-width: 100%;       
+    text-align: center;
+
+    &:hover{
+      background-color: #da62ff;
+      border: 2px solid #da62ff;
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }  
+
+    &:focus, &:active{ //reescribo el estilo de boostrap por defecto
+      background-color: #7b1fa2 !important;
+      color: #fff !important;
+      border: 2px solid #da62ff !important;
+    }
+  }
+
+  .popover {
+    background-color: #f1e9ff;
+    color: #2b063b;
+    border: 1px solid #7b1fa2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .popover-header {
+    background-color: #7b1fa2;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .popover-body {
+    font-size: 0.95rem;
+  }
+
+  
