@@ -640,32 +640,25 @@ form input[type=submit]:hover {
   background-position: center;
   border-radius: 10px;
   overflow: hidden;
+  overflow-y: auto;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
-  .carousel-inner {
-    height: 300px;
-  }
   .carousel-item .carrusel-info {
-    padding: 0.2rem;
-    object-fit: contain;
-    font-size: 2px;
-    align-items: center;
-    justify-items: flex-start;
-    max-height: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 1rem;
+    font-size: 0.9rem;
+    height: 100%;
+    justify-content: flex-start;
+    overflow-y: auto;
   }
   .carousel-item .carrusel-info h3 {
-    font-size: 15px;
-    padding: 0px;
-    margin: 0px;
+    font-size: 1rem;
+    text-align: start;
   }
   .carousel-item .carrusel-info p {
-    padding: 0px;
-    margin: 0px;
-    font-size: 10px;
-    max-height: 20%;
+    font-size: 0.85rem;
+    text-align: justify;
   }
 }
 .proyecto-container {
