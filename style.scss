@@ -386,6 +386,7 @@ h1 {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
   letter-spacing: 2px;
   display: inline-block;
+  font-weight: bold;
 
   &:hover {
     color: $color-secundario;
@@ -397,11 +398,12 @@ h1 {
 }
 
 h2 {
-  color: #002b5c;
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 15px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+  color: #002b5c ;
+  font-size: 30px ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  margin-top: 15px ;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.25) ;
+  font-weight: bold ;
 }
 
 // -------------------- LINKS --------------------
@@ -590,8 +592,7 @@ form {
   }
 }
 
-/* --- REGLAS PARA EL CARRUSEL: pegar y reemplazar las anteriores --- */
-/* --- Carrusel de obras (centrado y sin romper Bootstrap) --- */
+/* --- Carrusel de obras --- */
 .carousel-inner {
   overflow: hidden;
 }
@@ -602,11 +603,10 @@ form {
   position: relative;
 }
 
-/* Contenedor interno que sí puede usar flex */
 .carousel-item .image-container {
   width: 100%;
   height: 100%;
-  display: flex; /* centramos contenido */
+  display: flex; 
   justify-content: center;
   align-items: center;
   position: relative;
@@ -614,21 +614,19 @@ form {
   margin: 0;
 }
 
-/* Imagen centrada correctamente */
 .carousel-item img {
   width: auto;
   max-width: 100%;
   height: 100%;
   max-height: 450px;
-  object-fit:cover;   /* 🔹 muestra toda la imagen sin recortar */
+  object-fit:cover;   //quiero q se adapte al container
   object-position: center center;
   border-radius: 10px;
   box-shadow: none;
   display: block;
-  margin: 0 auto;        /* 🔹 centra horizontalmente */
+  margin: 0 auto;      
 }
 
-/* Overlay de texto */
 .image-container .overlay {
   position: absolute;
   top: 0;
@@ -650,3 +648,4 @@ form {
 .image-container:hover .overlay {
   opacity: 1;
 }
+
